@@ -1,0 +1,43 @@
+<section class="hero">
+
+  <!-- Golden Particles -->
+  <div class="particles">
+    <span *ngFor="let p of particles"></span>
+  </div>
+
+  <!-- Moving Moon -->
+  <div class="moon"></div>
+
+  <!-- Content -->
+  <div class="content">
+    <h1>🌙 Eid Mubarak</h1>
+    <p>May Allah fill your life with happiness, peace and prosperity.</p>
+
+    <input
+      type="text"
+      placeholder="Enter your name"
+      [(ngModel)]="userName"
+    />
+
+    <div class="error" *ngIf="showError">
+      Please enter your name
+    </div>
+
+    <button (click)="startWishes()">
+      Send Eid Wishes ❤️
+    </button>
+  </div>
+
+  <!-- Hearts Animation -->
+  <div class="hearts">
+    <span *ngFor="let h of hearts"
+          [style.left.%]="h.left"
+          [style.animationDuration.s]="h.duration">
+      ❤️
+    </span>
+  </div>
+
+  <!-- Mosque Silhouette Background -->
+  <div class="mosque"></div>
+
+</section>

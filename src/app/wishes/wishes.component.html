@@ -1,0 +1,34 @@
+<div class="wishes">
+
+  <h2>✨ Eid Mubarak ✨</h2>
+
+  <div class="card">
+
+    <p>
+      💌 <b>{{name}}</b> sent you a beautiful Eid wish!<br><br>
+      May Allah bring peace, happiness, and success to your life.<br>
+      🌙 Eid Mubarak!
+    </p>
+
+    <!-- Gift Box -->
+    <div class="gift-box" (click)="openGift = !openGift">
+      <div class="lid" [class.open]="openGift"></div>
+      <div class="box"></div>
+      <div *ngIf="openGift" class="gift-content">💌 {{name}}'s Eid Wish!</div>
+    </div>
+
+    <button routerLink="/">Send Your Wish</button>
+    <button (click)="shareWish()">Share on WhatsApp 📤</button>
+    <button (click)="copyLink()">Copy Wish Link 🔗</button>
+
+  </div>
+
+  <!-- Fireworks -->
+  <div class="fireworks">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</div>

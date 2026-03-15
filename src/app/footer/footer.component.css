@@ -1,0 +1,57 @@
+.footer{
+  background:#1e293b;
+  padding:20px 0;              /* thoda aur height */
+  text-align:center;
+  color:white;
+  font-size:16px;              /* text bada kiya */
+  width:100%;
+  box-shadow:0 -3px 15px rgba(0,0,0,0.6);
+  position:relative;
+  z-index:100;
+}
+
+.footer-content{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:15px;                   /* thoda aur spacing */
+}
+
+.developer{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:bold;
+}
+
+.logo-text{
+  display:inline-flex;
+  width:50px;                  /* logo thoda bada */
+  height:50px;
+  background:linear-gradient(135deg,#FFD700,#FFA500);
+  border-radius:50%;
+  color:white;
+  font-weight:bold;
+  font-size:24px;              /* text thoda bada */
+  align-items:center;
+  justify-content:center;
+}
+
+.social-links a{
+  margin:0 10px;
+  color:white;
+  font-size:28px;              /* icons thoda bada */
+  transition:0.3s;
+}
+
+.social-links a:hover{
+  color:gold;
+  transform:scale(1.25);
+}
+
+/* Mobile responsive */
+@media (max-width:600px){
+  .logo-text{ width:40px; height:40px; font-size:20px; }
+  .social-links a{ font-size:22px; }
+  .footer{ font-size:14px; padding:15px 0; }
+}
